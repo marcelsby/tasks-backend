@@ -63,7 +63,7 @@ pipeline {
       steps {
         dir('functional-test') {
           git 'https://github.com/marcelsby/tasks-functional-test'
-          sh 'mvn test -Dapp.selenium.hub.url=http://selenium-hub:4444 -Dapp.baseurl=http://tasks-app:8001/tasks'
+          sh 'mvn test -Dapp.selenium.hub.url=http://selenium-hub:4444 -Dapp.baseurl=http://tasks-app:8001/tasks -Dapp.backendbaseurl=http://tasks-app:8001/tasks-backend'
         }
       }
     }
